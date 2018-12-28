@@ -8,9 +8,11 @@
     </style>
 </head>
 <body>
-    <h1>我的第一个页面</h1>
-    <p>这是我的第一个页面的第一个<a href="http://study.163.com">段落</a></p>
-    
+    <h1>超链接</h1>
+    <p>当前页打开超链接：<a href="http://study.163.com">网易云课堂</a></p>
+    <p>空白页打开超链接：<a href="http://study.163.com" target="_blank">网易云课堂</a></p>
+    <hr>
+
     <h2>星巴克</h2>
     <ul>
         <li>咖啡</li>
@@ -23,20 +25,57 @@
             </ul>
         </li>    
     </ul>
-<!--     <ul>
-        <li><a class=""></a></li>
-        <li><a class=""></a></li>
-        <li><a class=""></a></li>
-        <li><a class=""></a></li>
-        
-    </ul> -->
+    <hr>
 
     <h3>浏览器</h3>
     <img src="img/chrome.jpg" alt="chrome"/>
 
     <script>
-        document.write('<p>这是我的第一个页面</p>');
+        document.write('<p>Js输出：这是我的第一个页面</p>');
     </script>
+    <hr>
+
+    <h3>表格</h3>
+    <table border="1">
+        <caption>H5常用实体字符表</caption>
+        <tr>
+            <th>空格“&nbsp”</th>
+            <th>引号“&quot;”</th>
+            <th>小于号“&lt;”</th>
+            <th>大于号“&gt;”</th>
+            <th>版权符“&copy;”</th>
+            <th>转义符“&amp;”</th>
+        </tr>
+        <tr>
+            <td>&amp;nbsp;</td>
+            <td>&amp;quot;</td>
+            <td>&amp;lt;</td>
+            <td>&amp;gt;</td>
+            <td>&amp;copy;</td>
+            <td>&amp;amp;</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h4>这是4号标题</h4>
+        <font size="3" color=#f00>这是3号字体文本</font>
+    <h5>这是5号标题</h5>
+        <font size="2">这是2号字体文本</font>
+    <h6>这是6号标题</h6>
+        <font size="1">这是1号字体文本</font>
+    <hr>
+    <h3>字体与换行</h3>
+    <p>
+        <strong>加粗文本</strong>
+        <br><br>
+        <em>斜体文本</em>
+        <br><br>
+        <code>电脑自动输出</code>
+        <br><br>
+        这是<sub>下标</sub>和<sup>上标</sup>
+        <br><br>
+        <del>宁死不屈</del>&nbsp;<ins>真香</ins>
+    </p>
 
 </body>
 </html>
