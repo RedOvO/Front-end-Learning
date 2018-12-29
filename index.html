@@ -7,6 +7,20 @@
     <meta name="description" content="Font-end Learning">
     <meta http-equiv="refresh" content="30"><!--每30秒刷新一次页面-->
     <title>这是我的第一个页面</title>
+    <script>
+        var percent = 0;
+        var title = '这是我的第一个页面';
+        var timer = setInterval(function () {
+            if (percent >= 100){
+                document.title = title;
+                clearInterval(timer);
+            }
+            else{
+                percent = percent + 1;
+                document.title = '【' + percent + '%】' + title;
+            }
+        }, 1000);
+    </script>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <style type="text/css">
         img{width:100px;}
