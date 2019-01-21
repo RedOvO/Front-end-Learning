@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+:<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,6 +23,32 @@
             }
                 
         }, 200)
+        
+        var programmer = {
+            tee: "culture shirt",
+            glass: "RayBan",
+            clockIn: function(){
+                alert('at 9:30 am')
+            },
+            clockOut: function(){
+                alert('at 9:30 pm')
+            }
+        }
+
+        Object.defineProperty(programmer, 'shoes', {
+            set: function(value) {
+                switch (value) {
+                   case 'nike':
+                        alert("just do it")
+                        break;
+                    case 'vans':
+                        alert('hahaha')
+                        break;
+                    default:
+                        break;
+                }
+            }
+        })
     </script>
 </head>
 <body>
