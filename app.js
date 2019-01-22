@@ -58,3 +58,4 @@ var second = date.getSeconds();
 var time = date.getTime();
 var week = date.getDay();
 console.log(year, month, day, hour, minute, second, time, week);
+console.log(format(date));
