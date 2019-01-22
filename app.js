@@ -46,7 +46,7 @@ console.log(array);
 
 var date1 = new Date(2016, 11, 11, 11, 11 ,11);
 console.log(date1);
-var date2 = new Date(2016, 12, 11, 11, 11 ,11);
+var date2 = new Date(2016, 12, 0, 11, 11 ,11);
 console.log(date2)
 var date = new Date();
 var year = date.getFullYear();
@@ -58,4 +58,3 @@ var second = date.getSeconds();
 var time = date.getTime();
 var week = date.getDay();
 console.log(year, month, day, hour, minute, second, time, week);
-console.log(format(date));
