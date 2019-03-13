@@ -26,7 +26,6 @@
     <style type="text/css">
         img{width:100px;}
         h3{color:red;}
-        body{background-color: yellowgreen}
     </style>
 </head>
 <body>
@@ -120,10 +119,20 @@
     <hr>
 
     <h3><a id="tips">有用的提示部分</a></h3>
-
     <hr>
+
     <h3>计时器</h3>
     <div id="timer">aaa</div>
+    <hr>
+
+    <h3>鼠标移至一个div显示另一个div</h3>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <h3>解析一个get请求的url -- localhost:8080?a=1&c=2&b=3</h3>
+    <div id="getUrl"></div>
+
+
 <script>
     var timer1 = setInterval(() => {
         document.getElementById("timer").innerHTML = new Date();
@@ -131,5 +140,6 @@
     console.log(timer1);
 
 </script>
+<script src="./url.js"></script>
 </body>
 </html>

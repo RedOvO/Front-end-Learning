@@ -1,0 +1,14 @@
+.div1, .div2 {
+	width: 100px;
+	height: 100px;
+}
+.div1 {
+	background: red;
+}
+.div2 {
+	visibility: hidden;
+	background: yellow;
+}
+.div1:hover + .div2 {
+	visibility: initial;
+}
