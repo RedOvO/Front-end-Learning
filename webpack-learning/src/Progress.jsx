@@ -1,4 +1,5 @@
 import React from 'react';
+import './progress.css';
 
 class Progress extends React.Component {
 	render(){
@@ -9,3 +10,5 @@ class Progress extends React.Component {
 		)
 	}
 }
+
+export default Progress;
