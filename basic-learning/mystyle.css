@@ -12,3 +12,12 @@
 .div1:hover + .div2 {
 	visibility: initial;
 }
+
+.redCircle {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: red;
+	border-style: solid;
+}
