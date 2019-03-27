@@ -32,8 +32,8 @@ cases.push([
 ]);
 // case2
 cases.push([
-	[],
-	[],
+	[1, 2],
+	[1, 3],
 ]);
 // case3
 cases.push([
