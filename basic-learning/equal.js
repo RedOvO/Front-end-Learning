@@ -9,9 +9,7 @@ const compare = (obj1, obj2) => {
 		if (array1.length !== array2.length) {
 			return false;
 		}
-		return array1.every((item) => {
-			return obj1[item] === obj2[item];
-		})
+		return array1.every((item) => obj1[item] === obj2[item]);
 	} else {
 		return obj1 === obj2;
 	}
