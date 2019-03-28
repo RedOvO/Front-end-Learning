@@ -1,11 +1,29 @@
+/*approach 1
 function deepClone(obj) {
-	if (obj && typeof obj === "object") {
+	const basicType = [Number, String, Boolean, Function, Date, RegExp];
+	let filterType = basicType.filter((type)=> obj instanceof type);
+	if (filterType.length > 0) {
+		return new filterType[0](obj);
+	} else if (obj instanceof Object) {
 		var res = Array.isArray(obj) ? new Array() : new Object();
 		var array = Object.keys(obj);
 		array.forEach(item => {
 			res[item] = deepClone(obj[item]);
 		});
 		return res;
+	} else {
+		return obj;
+	}
+}*/
+
+/* approach 2 */
+function deepClone(obj) {
+	let filterType = [Number, String, Boolean, Date, RegExp].filter((type) => obj instanceof type);
+	if (filterType.length > 0) {
+		return new filterType[0](obj);
+	} else if (obj instanceof Object && !obj instanceof Function) {
+		const newObjEntries = Object.entries(obj).map(entry => [entry[0], deepClone(entry[1])]);
+		return Object.fromEntries(newObjEntries);
 	} else {
 		return obj;
 	}
@@ -54,10 +72,10 @@ g = 2;
 console.log(g, h);
 
 //test 5
-let i = "abc";
+let ii = "abc";
 let j = deepClone(i);
-i = "aaa";
-console.log(i, j);
+ii = "aaa";
+console.log(ii, j);
 
 //test 6
 let k = true;
@@ -78,7 +96,36 @@ o[0] = 1;
 console.log(o, p);
 
 //test 9
-let q = undefined;
+let q = {
+	q1: undefined,
+	undefined: 2
+}
 let r = deepClone(q);
 q = 1;
 console.log(q, r);
+
+//test 10
+let s = {
+	s1: () => { },
+	s2: () => { }
+}
+let t = deepClone(s);
+console.log(s, t);
+
+//test 11
+let u = {
+	u1: new Number(1),
+	u2: new String("a"),
+	u3: new Boolean(true),
+	u4: new Date(),
+	u5: new RegExp(/./),
+}
+let v = deepClone(u);
+u = {
+	u1: new Number(2),
+	u2: new String("b"),
+	u3: new Boolean(false),
+	u4: new Date(),
+	u5: new RegExp(/\w/),
+}
+console.log(u, v);
