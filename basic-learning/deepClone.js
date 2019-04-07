@@ -16,7 +16,7 @@ function deepClone(obj) {
 	}
 }*/
 
-/* approach 2 */
+/* approach 2
 function deepClone(obj) {
 	let filterType = [Number, String, Boolean, Date, RegExp].filter((type) => obj instanceof type);
 	if (filterType.length > 0) {
@@ -26,6 +26,17 @@ function deepClone(obj) {
 		return Object.fromEntries(newObjEntries);
 	} else {
 		return obj;
+	}
+}*/
+
+/* approach 3 */
+function deepClone(obj) {
+	const basicType = [Number, String, Boolean, Date, RegExp, Function].find(type => obj instanceof type);
+	if (obj instanceof Object && !basicType) {
+		const newObjEntries = Object.entries(obj).map(entry => [entry[0], deepClone(entry[1])]);
+		return newObjEntries.reduce((newObj, current) => (newObj[current[0]] = current[1], newObj), {});
+	} else {
+		return (obj instanceof Function || !basicType) ? obj : basicType(obj);
 	}
 }
 
